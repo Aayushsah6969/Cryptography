@@ -1,6 +1,6 @@
 from file_hash import hash_file
 
-def verify_integrity(file1, file2):
+def file_integrity(file1, file2):
     """
     Verify the integrity of two files by comparing their SHA-256 hashes.
 
@@ -24,4 +24,6 @@ def verify_integrity(file1, file2):
         print("The files are different. Integrity compromised.")
         return False
 
-verify_integrity("../Samples/sample-file.txt", "../Samples/sample-file-copy.txt")
+if __name__ == "__main__":
+    # Example usage
+    file_integrity("../Samples/sample-file.txt", "../Samples/sample-file-copy.txt")
