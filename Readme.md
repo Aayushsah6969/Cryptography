@@ -1,37 +1,60 @@
 # Cryptography
 
-A practical learning journey into cryptography using Python. This repository contains my implementations, experiments, and notes as I learn cryptographic concepts and their real-world applications.
+A practical learning repository focused on understanding cryptography and implementing its fundamental concepts using Python.
+
+This repository contains small, hands-on implementations of cryptographic algorithms and techniques, exploring how they work and how they are used to protect information.
 
 ## Topics Covered
 
-- Hashing — Text and file hashing using SHA-256
-- Data Integrity — Verifying file integrity using cryptographic hashes
-- Cryptographic Algorithms — Exploring encryption, decryption, and digital signatures
-- Python Implementations — Building small cryptography tools from scratch
+### 1. Hashing
+Learn how cryptographic hash functions transform data into fixed-length digests.
 
-## Project Structure
+- Text hashing using SHA-256.
+- File hashing and integrity verification.
+- Comparing file hashes to detect changes in content.
 
-```text
-Cryptography/
-├── Hashing/
-│   ├── hash_file.py
-│   ├── hash-text.py
-│   └── verify-integrity.py
-├── Samples/
-│   ├── sample-file.txt
-│   └── sample-file-copy.txt
-├── main.py
-└── README.md
-````
+### 2. Encryption
+Introduction to the fundamentals of encryption, including plaintext, ciphertext, encryption, decryption, and cryptographic keys.
 
-## **Getting Started**
+### 3. Symmetric Encryption
+Implementation of AES-GCM, a symmetric encryption algorithm that uses the same secret key for encryption and decryption.
 
-Clone the repository and navigate to the project directory.
+- Generating a secure encryption key.
+- Encrypting and decrypting messages.
+- Understanding nonces and authentication tags.
+- Detecting unauthorized modifications to encrypted data.
 
-```
-git clone <repository-url>
+### 4. Asymmetric Encryption
+Implementation of RSA, a public-key cryptographic algorithm that uses a public-private key pair.
+
+- Generating RSA keys.
+- Encrypting messages using a public key.
+- Decrypting messages using a private key.
+- Understanding the role of OAEP padding.
+
+### 5. Steganography
+Implementation of image-based steganography using the Least Significant Bit (LSB) technique.
+
+- Hiding secret messages inside images.
+- Extracting hidden messages from images.
+- Understanding pixels, RGB values, and binary data.
+- Exploring the relationship between encryption and steganography.
+
+## Technologies Used
+
+- **Python 3** — Implementation language.
+- **cryptography** — Library for cryptographic algorithms and encryption.
+- **Pillow** — Library for image processing and steganography.
+- **Linux / Ubuntu** — Development environment.
+
+## Getting Started
+
+Clone the repository:
+
+```bash
+git clone git@github.com:Aayushsah6969/Cryptography.git
 cd Cryptography
-```
+````
 
 Create and activate a virtual environment:
 
@@ -40,23 +63,18 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-Run a hashing script:
+Install the required libraries:
 
 ```
-cd Hashing
-python3 hash_file.py
+pip install cryptography Pillow
 ```
 
-## **Technologies**
+## **Learning Objectives**
 
-- Python 3
-- hashlib
-- Linux / Ubuntu
-- Git & GitHub
+The goal of this repository is to develop a practical understanding of cryptography and its applications in cybersecurity.
 
-## **Learning Goals**
+Through these implementations, I aim to understand how data is protected, how cryptographic algorithms operate, and how Python can be used to build basic security tools.
 
-Understand how cryptographic algorithms work, implement them using Python, and explore their applications in cybersecurity.
+## **Disclaimer**
 
-**Note:** This repository is for educational purposes and hands-on learning.
-
+This repository is intended for educational purposes and hands-on learning. The implementations demonstrate fundamental cryptographic concepts and are not intended for production use.
